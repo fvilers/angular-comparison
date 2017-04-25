@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { GreaterThanDirective } from './greater-than.directive';
+import { GreaterThanDirective } from './directives';
 
 @NgModule({
   declarations: [
