@@ -4,6 +4,7 @@ export default {
   format: 'umd',
   globals: {
     '@angular/core': 'ng.core',
+    '@angular/forms': 'ng.forms'
   },
   moduleName: 'ng.comparison',
   sourceMap: false
