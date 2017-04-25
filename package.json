@@ -1,0 +1,21 @@
+{
+  "name": "angular-comparison",
+  "version": "0.0.0",
+  "description": "A collection of comparison directives for Angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvilers/angular-comparison.git"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "comparison",
+    "forms"
+  ],
+  "author": "Fabian Vilers <fabian.vilers@dev-one.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fvilers/angular-comparison/issues"
+  },
+  "homepage": "https://github.com/fvilers/angular-comparison#readme"
+}
