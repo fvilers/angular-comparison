@@ -13,11 +13,11 @@ import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
 })
 export class GreaterThanDirective implements Validator, OnChanges {
   @Input()
-  public ngGreaterThan;
+  public ngGreaterThan: any;
 
   private ctrl: AbstractControl;
   
-  validate(control: AbstractControl): {[key: string]: any} {
+  validate(control: AbstractControl): {[key: string]: any}|null {
     this.ctrl = control;
     
     if (this.ngGreaterThan !== undefined && (+control.value > +this.ngGreaterThan)) {
