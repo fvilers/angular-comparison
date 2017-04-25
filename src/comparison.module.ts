@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 
-import { GreaterThanDirective } from './directives';
+import { GreaterThanDirective, LowerThanDirective } from './directives/index';
 
 @NgModule({
   declarations: [
     GreaterThanDirective
   ],
   exports: [
-    GreaterThanDirective
+    GreaterThanDirective,
+    LowerThanDirective
   ]
 })
 export class ComparisonModule {
