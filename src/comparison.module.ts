@@ -4,7 +4,8 @@ import { GreaterThanDirective, LowerThanDirective } from './directives/index';
 
 @NgModule({
   declarations: [
-    GreaterThanDirective
+    GreaterThanDirective,
+    LowerThanDirective
   ],
   exports: [
     GreaterThanDirective,

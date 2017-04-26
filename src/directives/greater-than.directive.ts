@@ -1,5 +1,7 @@
-import { Directive, OnChanges, Input, SimpleChanges } from '@angular/core';
-import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
+import { Directive, Input } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
+
+import { ComparisonDirective } from './comparison.directive';
 
 @Directive({
   selector: '[ngGreaterThan]',
@@ -11,25 +13,15 @@ import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
     }
   ]
 })
-export class GreaterThanDirective implements Validator, OnChanges {
+export class GreaterThanDirective extends ComparisonDirective {
   @Input()
   public ngGreaterThan: any;
 
-  private ctrl: AbstractControl;
-  
-  validate(control: AbstractControl): {[key: string]: any}|null {
-    this.ctrl = control;
-    
-    if (this.ngGreaterThan !== undefined && (+control.value > +this.ngGreaterThan)) {
-      return null;
-    }
-    
-    return { 'ngGreaterThan': true };
+  constructor() {
+    super('ngGreaterThan');
   }
-  
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.ctrl) {
-      this.ctrl.updateValueAndValidity();
-    }
+
+  validateCore(control: AbstractControl): boolean {
+    return this.ngGreaterThan !== undefined && (+control.value > +this.ngGreaterThan);
   }
 }

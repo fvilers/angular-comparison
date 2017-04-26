@@ -1,5 +1,7 @@
-import { Directive, OnChanges, Input, SimpleChanges } from '@angular/core';
-import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
+import { Directive, Input } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
+
+import { ComparisonDirective } from './comparison.directive';
 
 @Directive({
   selector: '[ngLowerThan]',
@@ -11,25 +13,15 @@ import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
     }
   ]
 })
-export class LowerThanDirective implements Validator, OnChanges {
+export class LowerThanDirective extends ComparisonDirective {
   @Input()
   public ngLowerThan: any;
 
-  private ctrl: AbstractControl;
-  
-  validate(control: AbstractControl): {[key: string]: any}|null {
-    this.ctrl = control;
-    
-    if (this.ngLowerThan !== undefined && (+control.value < +this.ngLowerThan)) {
-      return null;
-    }
-    
-    return { 'ngLowerThan': true };
+  constructor() {
+    super('ngLowerThan');
   }
-  
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.ctrl) {
-      this.ctrl.updateValueAndValidity();
-    }
+
+  validateCore(control: AbstractControl): boolean {
+    return this.ngLowerThan !== undefined && (+control.value < +this.ngLowerThan);
   }
 }
