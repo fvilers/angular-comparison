@@ -22,6 +22,6 @@ export class GreaterThanDirective extends ComparisonDirective {
   }
 
   validateCore(control: AbstractControl): boolean {
-    return this.ngGreaterThan !== undefined && (+control.value > +this.ngGreaterThan);
+    return (this.ngGreaterThan || +this.ngGreaterThan === 0) && (+control.value > +this.ngGreaterThan);
   }
 }
