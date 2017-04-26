@@ -39,7 +39,7 @@ Add the greater than directive to an input element and specify the value to comp
 
 ```
 <input type="number" name="first" [(ngModel)]="values.first">
-<input type="number" #second name="second" [(ngModel)]="values.second" [greaterThan]="values.first">
+<input type="number" #second="ngModel" name="second" [(ngModel)]="values.second" [greaterThan]="values.first">
 ```
 
 Then, you can add a specific error message if the input value is not greater than the specified one.
