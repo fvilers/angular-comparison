@@ -14,6 +14,7 @@ import {
     EqualToDirective,
     GreaterThanDirective,
     GreaterThanOrEqualToDirective,
+    LowerThanOrEqualDirective,
     LowerThanDirective,
     NotEqualToDirective
   ],
