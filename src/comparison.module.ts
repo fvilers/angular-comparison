@@ -5,7 +5,8 @@ import {
   GreaterThanOrEqualToDirective,
   GreaterThanDirective,
   LowerThanOrEqualDirective,
-  LowerThanDirective
+  LowerThanDirective,
+  NotEqualToDirective
 } from './directives/index';
 
 @NgModule({
@@ -13,14 +14,16 @@ import {
     EqualToDirective,
     GreaterThanDirective,
     GreaterThanOrEqualToDirective,
-    LowerThanDirective
+    LowerThanDirective,
+    NotEqualToDirective
   ],
   exports: [
     EqualToDirective,
     GreaterThanOrEqualToDirective,
     GreaterThanDirective,
     LowerThanOrEqualDirective,
-    LowerThanDirective
+    LowerThanDirective,
+    NotEqualToDirective
   ]
 })
 export class ComparisonModule {

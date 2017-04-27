@@ -4,3 +4,4 @@ export { GreaterThanOrEqualToDirective } from './greater-than-or-equal-to.direct
 export { GreaterThanDirective } from './greater-than.directive';
 export { LowerThanOrEqualDirective } from './lower-than-or-equal.directive';
 export { LowerThanDirective } from './lower-than.directive';
+export { NotEqualToDirective } from './not-equal-to.directive';
