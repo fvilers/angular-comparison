@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 
 import {
   EqualToDirective,
-  GreaterThanDirective,
   GreaterThanOrEqualToDirective,
+  GreaterThanDirective,
+  LowerThanOrEqualDirective,
   LowerThanDirective
 } from './directives/index';
 
@@ -16,8 +17,9 @@ import {
   ],
   exports: [
     EqualToDirective,
-    GreaterThanDirective,
     GreaterThanOrEqualToDirective,
+    GreaterThanDirective,
+    LowerThanOrEqualDirective,
     LowerThanDirective
   ]
 })
