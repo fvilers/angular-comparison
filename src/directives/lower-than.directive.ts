@@ -22,6 +22,6 @@ export class LowerThanDirective extends ComparisonDirective {
   }
 
   validateCore(control: AbstractControl): boolean {
-    return (this.ngLowerThan || +this.ngLowerThan === 0) && (+control.value < +this.ngLowerThan);
+    return control.value < this.ngLowerThan;
   }
 }

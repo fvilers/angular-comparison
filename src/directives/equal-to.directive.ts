@@ -22,6 +22,6 @@ export class EqualToDirective extends ComparisonDirective {
   }
 
   validateCore(control: AbstractControl): boolean {
-    return this.ngEqualTo !== undefined && (+control.value === +this.ngEqualTo);
+    return control.value === this.ngEqualTo;
   }
 }
