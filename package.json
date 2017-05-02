@@ -1,6 +1,6 @@
 {
   "name": "angular-comparison",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of comparison directives for Angular",
   "scripts": {
     "clean": "rimraf dist",
