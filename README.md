@@ -1,6 +1,9 @@
 # angular-comparison
 A collection of comparison directives for Angular
 
+## Quick links
+- [Demo](https://fvilers.github.io/angular-comparison/index.html)
+
 ## Installation
 Add the package to your application.
 
