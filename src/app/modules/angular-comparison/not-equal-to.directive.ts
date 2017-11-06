@@ -4,24 +4,24 @@ import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
 import { ComparisonDirective } from './comparison.directive';
 
 @Directive({
-  selector: '[ngLowerThanOrEqual]',
+  selector: '[ngNotEqualTo]',
   providers: [
     {
       provide: NG_VALIDATORS,
-      useExisting: LowerThanOrEqualDirective,
+      useExisting: NotEqualToDirective,
       multi: true
     }
   ]
 })
-export class LowerThanOrEqualDirective extends ComparisonDirective {
+export class NotEqualToDirective extends ComparisonDirective {
   @Input()
-  public ngLowerThanOrEqual: any;
+  public ngNotEqualTo: any;
 
   constructor() {
-    super('ngLowerThanOrEqual');
+    super('ngNotEqualTo');
   }
 
   validateCore(control: AbstractControl): boolean {
-    return control.value < this.ngLowerThanOrEqual;
+    return control.value !== this.ngNotEqualTo;
   }
 }
