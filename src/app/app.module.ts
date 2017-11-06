@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatToolbarModule } from '@angular/material';
 import { AngularComparisonModule } from './modules/angular-comparison'
 
 import { AppComponent } from './app.component';
@@ -12,8 +13,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatInputModule,
     MatToolbarModule,
     AngularComparisonModule
   ],

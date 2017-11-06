@@ -5,4 +5,77 @@
 </mat-toolbar>
 
 <main class="mat-typography">
+  <form>
+    <fieldset>
+      <span class="mat-title">Equal to</span>
+      <mat-form-field>
+        <input matInput type="number" name="eqvalue1" placeholder="Value 1" [(ngModel)]="eq.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="eqvalue2" placeholder="Value 2" [(ngModel)]="eq.value2" [ngEqualTo]="eq.value1" #eqvalue2="ngModel">
+        <mat-error *ngIf="eqvalue2.hasError('ngEqualTo')">Value2 is not equal to value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+    
+    <fieldset>
+      <span class="mat-title">Greater than or equal to</span>
+      <mat-form-field>
+        <input matInput type="number" name="gtevalue1" placeholder="Value 1" [(ngModel)]="gte.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="gtevalue2" placeholder="Value 2" [(ngModel)]="gte.value2" [ngGreaterThanOrEqualTo]="gte.value1" #gtevalue2="ngModel">
+        <mat-error *ngIf="gtevalue2.hasError('ngGreaterThanOrEqualTo')">Value2 is not greater than or equal to value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+        
+    <fieldset>
+      <span class="mat-title">Greater than</span>
+      <mat-form-field>
+        <input matInput type="number" name="gtvalue1" placeholder="Value 1" [(ngModel)]="gt.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="gtvalue2" placeholder="Value 2" [(ngModel)]="gt.value2" [ngGreaterThan]="gt.value1" #gtvalue2="ngModel">
+        <mat-error *ngIf="gtvalue2.hasError('ngGreaterThan')">Value2 is not greater than value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+      <span class="mat-title">Lower than or equal to</span>
+      <mat-form-field>
+        <input matInput type="number" name="ltevalue1" placeholder="Value 1" [(ngModel)]="lte.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="ltevalue2" placeholder="Value 2" [(ngModel)]="lte.value2" [ngLowerThanOrEqual]="lte.value1" #ltevalue2="ngModel">
+        <mat-error *ngIf="ltevalue2.hasError('ngLowerThanOrEqual')">Value2 is not lower than or equal to value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+        
+    <fieldset>
+      <span class="mat-title">Lower than</span>
+      <mat-form-field>
+        <input matInput type="number" name="ltvalue1" placeholder="Value 1" [(ngModel)]="lt.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="ltvalue2" placeholder="Value 2" [(ngModel)]="lt.value2" [ngLowerThan]="lt.value1" #ltvalue2="ngModel">
+        <mat-error *ngIf="ltvalue2.hasError('ngLowerThan')">Value2 is not lower than value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+      <span class="mat-title">Not equal to</span>
+      <mat-form-field>
+        <input matInput type="number" name="neqvalue1" placeholder="Value 1" [(ngModel)]="neq.value1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" name="neqvalue2" placeholder="Value 2" [(ngModel)]="neq.value2" [ngNotEqualTo]="neq.value1" #neqvalue2="ngModel">
+        <mat-error *ngIf="neqvalue2.hasError('ngNotEqualTo')">Value2 is equal to value1.</mat-error>        
+      </mat-form-field>
+    </fieldset>
+  </form>
 </main>

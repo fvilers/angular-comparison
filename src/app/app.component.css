@@ -5,3 +5,11 @@
 main {
   padding: 20px;
 }
+
+fieldset {
+  border: 0;
+}
+
+span.mat-title {
+  display: block;
+}
