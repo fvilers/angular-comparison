@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatInputModule, MatToolbarModule } from '@angular/material';
-import { AngularComparisonModule } from './modules/angular-comparison'
+import { AngularComparisonModule } from '../lib'
 
 import { AppComponent } from './app.component';
 
